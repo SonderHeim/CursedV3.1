@@ -39,6 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/review/add", "/AboutRoses", "/AboutGeorgins", "/AboutLutiks").authenticated()
                 .anyRequest().authenticated()
                 .and()
+                .csrf().disable()
                 .formLogin()
                 .loginPage("/auth")
                 .permitAll()
